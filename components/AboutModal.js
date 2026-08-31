@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function AboutModal({ open, onClose }) {
   if (!open) return null;
 
@@ -9,7 +11,8 @@ export default function AboutModal({ open, onClose }) {
         <div className="modal-nav">
           <div className="nav-logo" style={{ fontSize: 14 }}>VAISHNAV</div>
           <div className="nav-links">
-            <button onClick={onClose}>WORK</button>
+            <Link href="/">FILMS</Link>
+            <Link href="/photography">PHOTOGRAPHY</Link>
             <span className="active">[ABOUT]</span>
           </div>
         </div>

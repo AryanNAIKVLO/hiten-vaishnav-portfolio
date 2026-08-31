@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { projects } from "../data/projects";
 import ProjectCard from "./ProjectCard";
 
@@ -7,7 +8,12 @@ export default function ProjectModal({ activeIndex, setActiveIndex, onClose, onA
   if (activeIndex === null) return null;
   const project = projects[activeIndex];
 
-  const stills = Array.from({ length: 6 }).map(
+  const hasEmbed = Boolean(project.embedUrl);
+  const hasVideo = Boolean(project.video);
+  const hasThumb = Boolean(project.thumbnail);
+  const hasStills = project.stills && project.stills.length > 0;
+
+  const fallbackStills = Array.from({ length: 6 }).map(
     (_, i) => projects[(activeIndex + i) % projects.length].ph
   );
 
@@ -24,13 +30,37 @@ export default function ProjectModal({ activeIndex, setActiveIndex, onClose, onA
         <div className="modal-nav">
           <div className="nav-logo" style={{ fontSize: 14 }}>VAISHNAV</div>
           <div className="nav-links">
-            <span className="active">[WORK]</span>
+            <span className="active">[FILMS]</span>
+            <Link href="/photography">PHOTOGRAPHY</Link>
             <button onClick={onAboutClick}>ABOUT</button>
           </div>
         </div>
 
-        <div className={`modal-hero ${project.ph}`}>
-          <div className="play large"></div>
+        <div className={`modal-hero ${hasEmbed || hasVideo || hasThumb ? "" : project.ph}`}>
+          {hasEmbed ? (
+            <iframe
+              className="modal-embed"
+              src={project.embedUrl}
+              title={project.title}
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+            />
+          ) : hasVideo ? (
+            <video
+              className="modal-video"
+              controls
+              poster={project.thumbnail || undefined}
+              src={project.video}
+            />
+          ) : hasThumb ? (
+            <>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={project.thumbnail} alt={project.title} className="modal-img" />
+              <div className="play large"></div>
+            </>
+          ) : (
+            <div className="play large"></div>
+          )}
         </div>
 
         <div className="modal-body">
@@ -48,9 +78,16 @@ export default function ProjectModal({ activeIndex, setActiveIndex, onClose, onA
           </div>
 
           <div className="stills-grid">
-            {stills.map((ph, i) => (
-              <div key={i} className={`still ${ph}`}></div>
-            ))}
+            {hasStills
+              ? project.stills.map((src, i) => (
+                  <div key={i} className="still">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={src} alt={`${project.title} still ${i + 1}`} className="still-img" />
+                  </div>
+                ))
+              : fallbackStills.map((ph, i) => (
+                  <div key={i} className={`still ${ph}`}></div>
+                ))}
           </div>
 
           <div className="other-projects">

@@ -25,7 +25,7 @@ export default function Home() {
 
   return (
     <>
-      <Nav onAboutClick={openAbout} />
+      <Nav active="films" onAboutClick={openAbout} />
 
       <div className="wrap">
         <Hero />
