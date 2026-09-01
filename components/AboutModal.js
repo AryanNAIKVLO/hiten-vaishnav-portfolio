@@ -47,8 +47,8 @@ export default function AboutModal({ open, onClose }) {
                 for the camera.
               </p>
               <p>
-                Replace this paragraph with your own background,
-                influences, and the kind of work you want to be hired for.
+                Inspired by contemporary cinema, music, and the visual language of everyday life, 
+                he is drawn to stories with character, emotion, and a strong point of view — collaborating with filmmakers and creative teams to build images that feel distinctive, human, and unforgettable.
               </p>
             </div>
             <div>
