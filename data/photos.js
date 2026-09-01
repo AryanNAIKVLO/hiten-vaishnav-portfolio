@@ -10,14 +10,24 @@
 // hero shot.
 
 export const photos = [
-  { caption: "ON SET — MONSOON", category: "Behind the Scenes", ph: "ph-0", src: "" },
-  { caption: "PORTRAIT STUDY I", category: "Portrait", ph: "ph-1", src: "" },
-  { caption: "HARBOUR LIGHT", category: "Landscape", ph: "ph-2", src: "" },
-  { caption: "HANDS, DETAIL", category: "Detail", ph: "ph-3", src: "" },
-  { caption: "NIGHT MARKET", category: "Street", ph: "ph-4", src: "" },
-  { caption: "PORTRAIT STUDY II", category: "Portrait", ph: "ph-5", src: "" },
-  { caption: "ON SET — ECHOES", category: "Behind the Scenes", ph: "ph-6", src: "" },
-  { caption: "WINDOW LIGHT", category: "Portrait", ph: "ph-7", src: "" },
-  { caption: "COASTLINE", category: "Landscape", ph: "ph-0", src: "" },
-  { caption: "REFLECTIONS", category: "Street", ph: "ph-2", src: "" },
+  { caption: "ON SET — Marines", category: "Behind the Scenes", ph: "ph-1", src: "/photography/Marines.jpg" },
+  { caption: "Vasai hidden files", category: "Landscape", ph: "ph-2", src: "/photography/Bridge.jpg" },
+  { caption: "Mumbai", category: "Landscape", ph: "ph-3", src: "/photography/Marine.jpg" },
+  { caption: "Ghass.RD", category: "Street", ph: "ph-4", src: "/photography/Ghaasrd.jpg" },
+  { caption: "Golden Hour", category: "Landscape", ph: "ph-5", src: "/photography/Golden.jpg" },
+  { caption: "Concreate jungle", category: "Portrait", ph: "ph-6", src: "/photography/Towers.jpg" },
+  { caption: "Sheeps", category: "Behind the Scenes", ph: "ph-7", src: "/photography/Sheeps.jpg" },
+  { caption: "Nights", category: "Portrait", ph: "ph-8", src: "/photography/Night.jpg" },
+  { caption: "Aagh", category: "Landscape", ph: "ph-9", src: "/photography/Aag.jpg" },
+  { caption: "Sid", category: "Behind the scenes", ph: "ph-10", src: "/photography/Sid.jpg" },
+  { caption: "Mini Kerala", category: "Landscape", ph: "ph-11", src: "/photography/Coconut trees.jpg" },
+  { caption: "Artyrn Shaurya", category: "Behind the Scenes", ph: "ph-12", src: "/photography/ArtyrnShaurya.jpg" },
+  { caption: "Vasai Doc", category: "Landscape", ph: "ph-13", src: "/photography/VasaiDoc.jpg" },
+  { caption: "Beach Football", category: "Landscape", ph: "ph-14", src: "/photography/BeachFootball.jpg" },
+  { caption: "Trekk", category: "Behind the Scenes", ph: "ph-15", src: "/photography/Trekk.jpg" },
+  { caption: "Me", category: "Potrait", ph: "ph-16", src: "/photography/Hiten.jpg" },
+  { caption: "Bridge Hutt", category: "Landscape", ph: "ph-17", src: "/photography/BridgeHutt.jpg" },
+  { caption: "Friends", category: "Candid", ph: "ph-18", src: "/photography/Goti.jpg" },
+
+
 ];

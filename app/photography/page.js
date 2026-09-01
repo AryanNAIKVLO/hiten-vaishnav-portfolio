@@ -23,8 +23,7 @@ export default function PhotographyPage() {
             PHOTOGRAPHY
           </div>
           <p className="hero-sub">
-            Stills shot on set and between productions. Replace these
-            placeholders with your own photography.
+            Stills shot on set and between productions. 
           </p>
         </section>
 

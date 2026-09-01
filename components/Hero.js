@@ -11,8 +11,8 @@ export default function Hero() {
         <div className="rec-dot"></div>
         <div className="rec-label">REC — SHOWREEL</div>
       </div>
-      <div className="hero-eyebrow">HITEN</div>
-      <div className="wordmark">VAISHNAV</div>
+      <div className="hero-eyebrow">VAISHNAV</div>
+      <div className="wordmark">HITEN</div>
       <p className="hero-sub">
         Director of Photography working across short film, music video,
         documentary and commercial work. Every frame below is a
