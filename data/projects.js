@@ -40,7 +40,7 @@ export const projects = [
     ph: "ph-1",
     thumbnail: "",
     video: "",
-    embedUrl: "https://youtu.be/LJY78ZqzVpQ",
+    embedUrl: "https://www.youtube.com/watch?v=LJY78ZqzVpQ",
     stills: [],
     quote: "Created to create",
     credits: {
