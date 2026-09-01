@@ -19,7 +19,7 @@ export default function AboutModal({ open, onClose }) {
         <div className="modal-close" onClick={onClose}>✕</div>
 
         <div className="modal-nav">
-          <div className="nav-logo" style={{ fontSize: 14 }}>VAISHNAV</div>
+          <div className="nav-logo" style={{ fontSize: 14 }}>HITEN</div>
           <div className="nav-links">
             <Link href="/">FILMS</Link>
             <Link href="/photography">PHOTOGRAPHY</Link>
@@ -52,11 +52,7 @@ export default function AboutModal({ open, onClose }) {
               </p>
             </div>
             <div>
-              <h5>CLIENTS &amp; RECOGNITION</h5>
-              <p>
-                List the brands, artists, or productions you&apos;ve shot
-                for here, plus any festival selections or awards.
-              </p>
+              
               <div className="contact-row">
                 <span>PERSONAL CONTACT</span>
                 <a href={`tel:${PERSONAL_PHONE}`}>{PERSONAL_PHONE}</a>
