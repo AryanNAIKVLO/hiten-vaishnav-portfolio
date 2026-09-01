@@ -4,7 +4,7 @@ export default function Nav({ active, onAboutClick, compact = false }) {
   return (
     <nav className="nav">
       <div className="nav-logo" style={compact ? { fontSize: 14 } : undefined}>
-        VAISHNAV
+        HITEN
       </div>
       <div className="nav-links">
         <Link href="/" className={active === "films" ? "active" : ""}>

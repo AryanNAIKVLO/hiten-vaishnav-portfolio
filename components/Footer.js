@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer>
-      <div className="f-logo">VAISHNAV</div>
+      <div className="f-logo">HITEN</div>
       <div className="f-credit">CINEMATOGRAPHY PORTFOLIO — HITEN VAISHNAV</div>
       <div className="socials">
         <a href="#">VIMEO</a>
