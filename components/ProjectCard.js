@@ -1,13 +1,16 @@
+import { getYouTubeThumbnail } from "../lib/youtube";
+
 export default function ProjectCard({ project, onClick, size = "default" }) {
   const isSmall = size === "small";
-  const hasThumb = Boolean(project.thumbnail);
+  const thumbnailSrc = project.thumbnail || getYouTubeThumbnail(project.embedUrl);
+  const hasThumb = Boolean(thumbnailSrc);
 
   return (
     <div className="thumb" onClick={onClick}>
       <div className={`thumb-media ${hasThumb ? "" : project.ph} ${isSmall ? "small" : ""}`}>
         {hasThumb && (
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={project.thumbnail} alt={project.title} className="thumb-img" />
+          <img src={thumbnailSrc} alt={project.title} className="thumb-img" />
         )}
         <div className={`play ${isSmall ? "small" : ""}`}></div>
         {!isSmall && !hasThumb && (
