@@ -499,6 +499,9 @@ footer {
 }
 .contact-row span:last-child {
   color: var(--accent);
+  .contact-row a:hover {
+  text-decoration: underline;
+}
 }
 
 /* ---------- PHOTOGRAPHY GRID ---------- */
