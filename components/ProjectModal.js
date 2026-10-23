@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { projects } from "../data/projects";
 import ProjectCard from "./ProjectCard";
+import { getYouTubeEmbedUrl, getYouTubeStills } from "../lib/youtube";
 
 export default function ProjectModal({ activeIndex, setActiveIndex, onClose, onAboutClick }) {
   if (activeIndex === null) return null;
@@ -11,7 +12,13 @@ export default function ProjectModal({ activeIndex, setActiveIndex, onClose, onA
   const hasEmbed = Boolean(project.embedUrl);
   const hasVideo = Boolean(project.video);
   const hasThumb = Boolean(project.thumbnail);
-  const hasStills = project.stills && project.stills.length > 0;
+
+  // Stills: your own hand-picked images win; otherwise use YouTube's auto frames.
+  const manualStills = project.stills && project.stills.length > 0 ? project.stills : [];
+  const autoStills = manualStills.length === 0 ? getYouTubeStills(project.embedUrl) : [];
+  const stillsToShow = manualStills.length > 0 ? manualStills : autoStills;
+  const hasStills = stillsToShow.length > 0;
+  const usingAutoStills = autoStills.length > 0;
 
   const fallbackStills = Array.from({ length: 6 }).map(
     (_, i) => projects[(activeIndex + i) % projects.length].ph
@@ -40,7 +47,7 @@ export default function ProjectModal({ activeIndex, setActiveIndex, onClose, onA
           {hasEmbed ? (
             <iframe
               className="modal-embed"
-              src={project.embedUrl}
+              src={getYouTubeEmbedUrl(project.embedUrl)}
               title={project.title}
               allow="autoplay; fullscreen; picture-in-picture"
               allowFullScreen
@@ -79,8 +86,8 @@ export default function ProjectModal({ activeIndex, setActiveIndex, onClose, onA
 
           <div className="stills-grid">
             {hasStills
-              ? project.stills.map((src, i) => (
-                  <div key={i} className="still">
+              ? stillsToShow.map((src, i) => (
+                  <div key={i} className={`still ${usingAutoStills ? "auto" : ""}`}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src={src} alt={`${project.title} still ${i + 1}`} className="still-img" />
                   </div>

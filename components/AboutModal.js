@@ -40,15 +40,15 @@ export default function AboutModal({ open, onClose }) {
               <h5>BIOGRAPHY</h5>
               <p>
                 Hiten Vaishnav is a director of photography drawn to quiet,
-                observational imagery — light that feels found rather than
-                lit. He approaches every project, from a two-minute music
+                observational imagery , light that feels found rather than
+                lit. I approaches every project, from a two-minute music
                 video to a feature documentary, with the same question:
                 what does this story look like when nobody is performing
                 for the camera.
               </p>
               <p>
                 Inspired by contemporary cinema, music, and the visual language of everyday life, 
-                he is drawn to stories with character, emotion, and a strong point of view — collaborating with filmmakers and creative teams to build images that feel distinctive, human, and unforgettable.
+                i am drawn to stories with character, emotion, and a strong point of view , collaborating with filmmakers and creative teams to build images that feel distinctive, human, and unforgettable.
               </p>
             </div>
             <div>

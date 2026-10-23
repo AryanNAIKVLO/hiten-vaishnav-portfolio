@@ -15,9 +15,7 @@ export default function Hero() {
       <div className="wordmark">HITEN</div>
       <p className="hero-sub">
         Director of Photography working across short film, music video,
-        documentary and commercial work. Every frame below is a
-        placeholder — swap in your own footage and stills to make this
-        page yours.
+        documentary and commercial work. Inspired by contemporary cinema, music, and the visual language of everyday life, i am drawn to stories with character, emotion, and a strong point of view , collaborating with filmmakers and creative teams to build images that feel distinctive, human, and unforgettable.
       </p>
     </section>
   );

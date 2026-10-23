@@ -30,11 +30,7 @@ export default function Home() {
       <div className="wrap">
         <Hero />
 
-        <div className="featured">
-          {projects.slice(0, 2).map((p, i) => (
-            <ProjectCard key={i} project={p} onClick={() => openProject(i)} />
-          ))}
-        </div>
+        
 
         <div className="section-label">SELECTED WORK</div>
         <div className="grid">
@@ -47,9 +43,9 @@ export default function Home() {
           <div>
             <h4><span className="accent-bar"></span>Gear</h4>
             <p>
-              Sony FX6 · Cooke Panchro primes · DJI RS3 Pro
+              Sony zv 10. Canon 700d  · kit lens 16 - 55 mm 
               <br />
-              Replace with your own camera &amp; lens kit.
+                
             </p>
           </div>
           <div>
@@ -57,7 +53,7 @@ export default function Home() {
             <p>
               Mumbai, India — available worldwide for shoots.
               <br />
-              Update with your city and travel radius.
+              
             </p>
           </div>
         </div>
