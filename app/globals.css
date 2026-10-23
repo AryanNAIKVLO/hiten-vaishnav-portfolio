@@ -719,3 +719,49 @@ footer {
     justify-self: end;
   }
 }
+/* ---------- HERO PHOTO OVERLAY ---------- */
+.hero-stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: clamp(320px, 42vw, 560px);
+}
+.hero-stage-text {
+  position: relative;
+  z-index: 2; /* text sits in front of the photo */
+  min-width: 0;
+}
+.hero-stage .wordmark {
+  font-size: clamp(72px, 19vw, 250px); /* bigger so it reaches over the photo */
+}
+.hero-photo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 55%;
+  z-index: 1;
+  overflow: hidden;
+}
+.hero-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  filter: brightness(0.85) contrast(1.05);
+}
+/* fades the photo's left edge into the page so the letters stay readable */
+.hero-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, var(--bg) 0%, rgba(11, 11, 10, 0) 55%);
+}
+
+@media (min-width: 721px) {
+  .hero-photo {
+    width: 48%;
+  }
+}
