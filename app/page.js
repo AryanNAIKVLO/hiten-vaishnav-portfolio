@@ -43,7 +43,7 @@ export default function Home() {
           <div>
             <h4><span className="accent-bar"></span>Gear</h4>
             <p>
-              Sony zv 10. Canon 700d  · kit lens 16 - 55 mm 
+              Sony zve 10. Canon 700d  · kit lens 16 - 55 mm 
               <br />
                 
             </p>
